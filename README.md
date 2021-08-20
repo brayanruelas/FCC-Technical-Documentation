@@ -1,2 +1,2 @@
-# FCC-Techincal-Documentation
+# FCC-Technical-Documentation
 freeCodeCamp project
