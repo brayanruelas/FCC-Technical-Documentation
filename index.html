@@ -12,79 +12,400 @@
     <header>
       <img id="header-logo" src="images/PHP-logo.svg" alt="PHP Logo">
     </header>
-      <ul>
-        <li>
-          <a class="nav-link" href="#text1">text1</a></a>
-        </li>
-        <li>
-          <a class="nav-link" href="#text2">text2</a></a>
-        </li>
-        <li>
-          <a class="nav-link" href="#text3">text3</a></a>
-        </li>
-        <li>
-          <a class="nav-link" href="#text4">text4</a></a>
-        </li>
-        <li>
-          <a class="nav-link" href="#text5">text5</a></a>
-        </li>
-      </ul>
+    <ul>
+      <li>
+         <a class="nav-link" href="#introduction">Introduction</a></a>
+      </li>
+      <li>
+        <a class="nav-link" href="#hello_world">Hello World</a></a>
+      </li>
+      <li>
+        <a class="nav-link" href="#variable_types">Variable Types</a></a>
+      </li>
+      <li>
+        <a class="nav-link" href="#constant">Constant</a></a>
+      </li>
+      <li>
+          <a class="nav-link" href="#operator_types">Operator Types</a></a>
+      </li>
+      <li>
+        <a class="nav-link" id="loop-type" href="#loop_types">Loop Types</a></a>
+      </li>
+    </ul>
   </nav>
   <main id="main-doc">
     <section id="title">
       <header>PHP Documentation</header>
     </section>
 
-    <section class="main-section" id="text1">
-      <header>text1</header>
+    <section class="main-section" id="introduction">
+      <header>Introduction</header>
       <p>
-        filler
+        The PHP Hypertext Preprocessor (PHP) is a programming language
+        that allows web developers to create dynamic content that
+        interacts with databases. PHP is basically used for developing
+        web based software applications. This tutorial helps you to
+        build your base with PHP.
       </p>
       <p>
-        filler
-      </p>
-    </section>
-
-    <section class="main-section" id="text2">
-      <header>text2</header>
-      <p>
-        filler
-      </p>
-      <p>
-        filler
-      </p>
-    </section>
-
-    <section class="main-section" id="text3">
-      <header>text3</header>
-      <p>
-        filler
-      </p>
-      <p>
-        filler
+        PHP started out as a small open source project that evolved as
+        more and more people found out how useful it was. Rasmus Lerdorf
+        unleashed the first version of PHP way back in 1994. PHP is a
+        must for students and working professionals to become a great
+        Software Engineer specially when they are working in Web
+        Development Domain.
       </p>
     </section>
 
-    <section class="main-section" id="text4">
-      <header>text4</header>
+    <section class="main-section" id="hello_world">
+      <header>Hello World</header>
       <p>
-        filler
+        To get started on PHP you first have to learn how to print out the
+        statement "Hello World". Printing out "Hello World" as your first
+        script is used to illustrate the basic syntax of a programming language.
+        It is often the first program written by people learning to code.
       </p>
       <p>
-        filler
+        PHP is embedded in HTML. That means among your HTML you'll have a PHP
+        statement like this below.
       </p>
+      <pre>
+        <code>
+          &lthtml&gt
+            &lthead&gt
+              &lttitle&gtHello World&lt/title&gt
+            &lt/head&gt
+
+            &ltbody&gt
+              &lt?php echo "Hello, World!";?&gt
+            &ltbody&gt
+          &lthtml&gt
+        </code>
+      </pre>
+      <p>
+        The following will produce
+      </p>
+      <pre>
+        <code>
+          Hello, World!
+        </code>
+      </pre>
+    </section>
+    <br>
+    <section class="main-section" id="variable_types">
+      <header>Variable Types</header>
+      <p>
+        The main way to store information in the middle of a PHP program is by
+        using a variable. Here are the most important things to know about
+        variables in PHP.
+      </p>
+      <p>
+        PHP has a total of eight data types which we use to construct our variables.
+      </p>
+      <ul>
+        <li>
+          <b>Integers</b> are whole numbers, without a decimal point, like 4195.
+        </li>
+        <li>
+          <b>Doubles</b> are floating-point numbers, like 3.14159 or 49.1.
+        </li>
+        <li>
+          <b>Booleans</b> have only two possible values either true or false.
+        </li>
+        <li>
+          <b>NULL</b> is a special type that only has one value: NULL.
+        </li>
+        <li>
+          <b>Strings</b> are sequences of characters, like 'PHP supports string operations.'
+        </li>
+        <li>
+          <b>Arrays</b> are named and indexed collections of other values.
+        </li>
+        <li>
+          <b>Objects</b> are instances of programmer-defined classes, which can package
+          up both other kinds of values and functions that are specific to the class.
+        </li>
+        <li>
+          <b>Resources</b> are special variables that hold references to resources
+          external to PHP (such as database connections).
+        </li>
+      </ul>
     </section>
 
-    <section class="main-section" id="text5">
-      <header>text5</header>
+    <section class="main-section" id="constant">
+      <header>Constant</header>
       <p>
-        filler
+        A constant is a name or an identifier for a simple value. A constant value cannot 
+        change during the execution of the script. By default, a constant is case-sensitive. 
+        By convention, constant identifiers are always uppercase. A constant name starts 
+        with a letter or underscore, followed by any number of letters, numbers, or 
+        underscores. If you have defined a constant, it can never be changed or undefined.
       </p>
       <p>
-        filler
+        To define a constant you have to use define() function and to retrieve the value 
+        of a constant, you have to simply specifying its name. Unlike with variables, you 
+        do not need to have a constant with a $. You can also use the function constant() 
+        to read a constant's value if you wish to obtain the constant's name dynamically
       </p>
+      <p>
+        Constant Example
+      </p>
+        <pre>
+          <code>
+            &lt?php
+              define("MINSIZE", 50);
+      
+              echo MINSIZE;
+              echo constant("MINSIZE"); 
+            ?&gt
+          </code>
+        </pre>
+    </section>
+
+    <section class="main-section" id="operator_types">
+      <header>Operator Types</header>
+      <p>
+        An operator is a character, or characters, that determine what action is to be performed or considered
+      </p>
+      <p>
+        Type of operators 
+      </p>
+      <ul>
+        <li>Arithmetic Operaotrs</li>
+        <li>Comparison Operaotrs</li>
+        <li>Logical Operaotrs</li>
+        <li>Assignment Operaotrs</li>
+        <li>Conditional Operaotrs</li>
+      </ul>
+      <p>
+        <b>Comparison Operaotrs</b>
+      </p>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th class="ts">Operator</th>
+            <th class="ts">Description</th>
+            <th class="ts">Example</th>
+          </tr>
+          <tr>
+            <td class="ts">+</td>
+            <td>Adds two operands</td>
+            <td>A + B will give 30</td>
+          </tr>
+          <tr>
+            <td class="ts">-</td>
+            <td>Subtracts second operand from the first</td>
+            <td>A - B will give -10</td>
+          </tr>
+          <tr>
+            <td class="ts">*</td>
+            <td>Multiply both operands</td>
+            <td>A * B will give 200</td>
+          </tr>
+          <tr>
+            <td class="ts">/</td>
+            <td>Divide numerator by de-numerator</td>
+            <td>B / A will give 2</td>
+          </tr>
+          <tr>
+            <td class="ts">%</td>
+            <td>Modulus Operator and remainder of after an integer division</td>
+            <td>B % A will give 0</td>
+          </tr>
+          <tr>
+            <td class="ts">++</td>
+            <td>Increment operator, increases integer value by one</td>
+            <td>A++ will give 11</td>
+          </tr>
+          <tr>
+            <td class="ts">--</td>
+            <td>Decrement operator, decreases integer value by one</td>
+            <td>A-- will give 9</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <b>Comparison Operaotrs</b>
+      </p>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th class="ts">Operator</th>
+            <th class="ts">Description</th>
+            <th class="ts">Example</th>
+          </tr>
+          <tr>
+            <td class="ts">==</td>
+            <td>Checks if the value of two operands are equal or not, if yes then condition becomes true.</td>
+            <td>(A == B) is not true.</td>
+          </tr>
+          <tr>
+            <td class="ts">!=</td>
+            <td>Checks if the value of two operands are equal or not, if values are not equal then condition becomes true.</td>
+            <td>(A != B) is true</td>
+          </tr>
+          <tr>
+            <td class="ts">></td>
+            <td>Checks if the value of left operand is greater than the value of right operand, if yes then condition becomes true.</td>
+            <td>(A > B) is not true</td>
+          </tr>
+          <tr>
+            <td class="ts">&gt</td>
+            <td>Checks if the value of left operand is less than the value of right operand, if yes then condition becomes true</td>
+            <td>(A &gt B) is true</td>
+          </tr>
+          <tr>
+            <td class="ts">>=</td>
+            <td>Checks if the value of left operand is greater than or equal to the value of right operand, if yes then condition becomes true</td>
+            <td>(A >= B) is not true.</td>
+          </tr>
+          <tr>
+            <td class="ts">&gt=</td>
+            <td>Checks if the value of left operand is less than or equal to the value of right operand, if yes then condition becomes true</td>
+            <td>(A &gt= B) is true</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <b>Logical Operaotrs</b>
+      </p>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th class="ts">Operator</th>
+            <th class="ts">Description</th>
+            <th class="ts">Example</th>
+          </tr>
+          <tr>
+            <td class="ts">and</td>
+            <td>Called Logical AND operator. If both the operands are true then condition becomes true</td>
+            <td>(A and B) is true.</td>
+          </tr>
+          <tr>
+            <td class="ts">or</td>
+            <td>Called Logical OR Operator. If any of the two operands are non zero then condition becomes true.</td>
+            <td>(A or B) is true</td>
+          </tr>
+          <tr>
+            <td class="ts">&&</td>
+            <td>Called Logical AND operator. If both the operands are non zero then condition becomes true.</td>
+            <td>(A && B) is true</td>
+          </tr>
+          <tr>
+            <td class="ts">||</td>
+            <td>Called Logical OR Operator. If any of the two operands are non zero then condition becomes true.</td>
+            <td>(A || B) is true.</td>
+          </tr>
+          <tr>
+            <td class="ts">!</td>
+            <td>Called Logical NOT Operator. Use to reverses the logical state of its operand. If a condition is true then Logical NOT operator will make false.</td>
+            <td>!(A && B) is false</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <b>Assignment Operaotrs</b>
+      </p>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th class="ts">Operator</th>
+            <th class="ts">Description</th>
+            <th class="ts">Example</th>
+          </tr>
+          <tr>
+            <td class="ts">=</td>
+            <td>Simple assignment operator, Assigns values from right side operands to left side operand</td>
+            <td>C = A + B will assign value of A + B into C</td>
+          </tr>
+          <tr>
+            <td class="ts">+=</td>
+            <td>Add AND assignment operator, It adds right operand to the left operand and assign the result to left operand</td>
+            <td>C += A is equivalent to C = C + A</td>
+          </tr>
+          <tr>
+            <td class="ts">-=</td>
+            <td>Subtract AND assignment operator, It subtracts right operand from the left operand and assign the result to left operand</td>
+            <td>C -= A is equivalent to C = C - A</td>
+          </tr>
+          <tr>
+            <td class="ts">*=</td>
+            <td>Multiply AND assignment operator, It multiplies right operand with the left operand and assign the result to left operand</td>
+            <td>C *= A is equivalent to C = C * A</td>
+          </tr>
+          <tr>
+            <td class="ts">/=</td>
+            <td>Divide AND assignment operator, It divides left operand with the right operand and assign the result to left operand</td>
+            <td>C /= A is equivalent to C = C / A</td>
+          </tr>
+          <tr>
+            <td>%=</td>
+            <td>Modulus AND assignment operator, it takes modulus using two operands and assign the results to left operand</td>
+            <td>C %= A is equivalent to C = C % A</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <b>Conditional Operator (also known as a ternary  operator)</b>
+      </p>
+      <p>
+        Used to make decision based on the different condition, example of standard if else syntax below
+      </p>
+      <pre>
+        <code>
+          &lt?php if(condition) { ?&gt
+              &ltcode to be executed if condition is true&gt
+          &lt?php } else { ?&gt
+              &ltcode to executed if condition is false&gt
+          &lt?php } ?&gt
+        </code>
+      </pre>
+      <p>
+        Another example but in a switch statement
+      </p>
+      <pre>
+        <code>
+          &lt?php
+         $d = date("D");
+         
+         switch ($d){
+            case "Mon":
+               echo "Today is Monday";
+               break;
+            
+            case "Tue":
+               echo "Today is Tuesday";
+               break;
+            default:
+               echo "Wonder which day is this ?";
+         }
+      ?&gt
+        </code>
+      </pre>
+    </section>
+
+    <section class="main-section" id="loop_types">
+      <header>Loop Types</header>
+      <p>
+        Loops in PHP are used to execute the same block of code a specified number of times. There are four loops types that are supported by PHP.
+      </p>
+      <ul>
+        <li><b>for </b>loops through a block of code a specified number of times.</li>
+        <li><b>while </b>loops through a block of code if and as long as a specified condition is true.</li>
+        <li><b>do...while </b>loops through a block of code once, and then repeats the loop as long as a special condition is true.</li>
+        <li><b>foreach </b>loops through a block of code for each element in an array.</li>
+      </ul>
     </section>
     
+    <section>
+      <header>Reference</header>
+      <p>
+        All the Documentation in this page was taken from <a href="https://www.tutorialspoint.com/php/index.htm">here</a>
+      </p>
+    </section>
+    <footer>
+      
+    </footer>
   </main>
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>

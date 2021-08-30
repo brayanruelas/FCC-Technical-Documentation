@@ -4,6 +4,7 @@ html, body {
   min-width: 290px;
   background-color: #FFFFFF;
   font-family: 'Roboto', sans-serif;
+  line-height: 1.72332;
 }
 
 #navbar {
@@ -13,7 +14,7 @@ html, body {
   left: 0px;
   width: 300px;
   height: 100%;
-  border-right: solid;
+  border-right: 1px solid;
   border-color: #000;
 }
 
@@ -39,6 +40,10 @@ header {
   overflow-x: hidden;
 }
 
+#navbar ul li #loop-type{
+  border-bottom: 1px solid;
+}
+
 #navbar a {
   display: block;
   border-top: 1px solid;
@@ -61,7 +66,67 @@ header {
   margin-bottom: 110px;
 }
 
+
+@media only screen and (max-width: 700px) {
+  #navbar {
+    min-width: 90vw;
+    position: static;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-color: #000;
+  }
+    
+  #main-doc {
+    margin-left: -10px;
+  }
+}
+
 #title header {
   text-align: center;
   margin-bottom: 30px;
 }
+
+pre {
+  background: #eee;
+  border-radius: 3.5px;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid #000;
+  background-color: transparent;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+th {
+  display: table-cell;
+  padding: 8px;
+  vertical-align: top;
+  font-weight: normal;
+  background: #ddd;
+  border: 1px solid #ddd;
+}
+
+td {
+  display: table-cell;
+  padding: 8px;
+  line-height: 1.5;
+  vertical-align: top;
+  border: 1px solid #ddd;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+
